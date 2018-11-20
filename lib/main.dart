@@ -12,15 +12,15 @@ void main() {
 class Home extends StatelessWidget{
   startPayment() async {
     Map<String, dynamic> options = new Map();
-    options.putIfAbsent("name", () => "Razorpay T-Shirt");
+    options.putIfAbsent("name", () => "Register");
     options.putIfAbsent("image", () => "https://www.73lines.com/web/image/12427");
     options.putIfAbsent("description", () => "This is a real transaction");
     options.putIfAbsent("amount", () => "200");
-    options.putIfAbsent("email", () => "abhi.in12@gmail.com");
-    options.putIfAbsent("contact", () => "7834853995");
+    options.putIfAbsent("email", () => "test.test@gmail.com");
+    options.putIfAbsent("contact", () => "9990997865");
     //Must be a valid HTML color.
     options.putIfAbsent("theme", () => "#FF0000");
-    options.putIfAbsent("api_key", () => "rzp_test_UNDftkoFjL7mEt");
+    options.putIfAbsent("api_key", () => "API_KEY");
     Map<dynamic,dynamic> paymentResponse = new Map();
     paymentResponse = await Razorpay.showPaymentForm(options);
     debugPrint("response $paymentResponse");
